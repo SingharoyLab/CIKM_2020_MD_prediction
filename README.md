@@ -1,9 +1,9 @@
-# Github directory for replicating the molecular dyanmics simulations described in Gupta and Cava et. al.
+# Github repository for replicating the molecular dynamics simulations described in Gupta and Cava et. al.
 
 
 # Software list
 * OpenMM: GPU install
-  * conda install -c omnia/label/cuda92 -c conda-forge openmm 
+  `conda install -c omnia/label/cuda92 -c conda-forge openmm `
 * cuda 92
 
 
