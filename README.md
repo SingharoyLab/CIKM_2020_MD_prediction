@@ -15,4 +15,4 @@ Scripts for running equilibrium simulations can be found in the Equilibrium_MD_s
 
 # Sample trajectories
 
-Raw trajectory files can be downloaded from the following google srive link: https://drive.google.com/drive/folders/1gxx-LV-UcQjBOgv7EjUaacQPXLGO0H1l?usp=sharing
+Raw trajectory files can be downloaded from the following google drive link: https://drive.google.com/drive/folders/1gxx-LV-UcQjBOgv7EjUaacQPXLGO0H1l?usp=sharing
