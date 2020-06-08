@@ -1,6 +1,3 @@
-# Github repository for replicating the molecular dynamics simulations described in Gupta and Cava et. al.
-
-
 # Software list
 * OpenMM: GPU install
 
