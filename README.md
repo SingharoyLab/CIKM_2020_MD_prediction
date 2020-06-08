@@ -3,7 +3,9 @@
 
 # Software list
 * OpenMM: GPU install
+
   `conda install -c omnia/label/cuda92 -c conda-forge openmm `
+
 * cuda 92
 
 
