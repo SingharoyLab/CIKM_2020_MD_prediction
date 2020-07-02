@@ -49,7 +49,10 @@ Scripts for running SMD simulations has been provided in the Non-equilibrium_MD_
     
 # Data visualization
 
-As mentioned above, the data presented here are the Cartesean coordinates of atoms for every time point in the time series. The VMD software package can be used to visualize the atoms in 3D space as well as observing the evolution of the atom positions in time, in the form of a molecular movie.
+As mentioned above, the data presented here are the Cartesean coordinates of atoms for every time point in the time series. The VMD software package can be used to visualize the atoms in 3D space as well as observing the evolution of the atom positions in time, in the form of a molecular movie. VMD can be launched from the command line by typing 'vmd', and the menu options can be used to load the *.xyz file. Conversely, the *.xyz file can be loaded during launch with the following command:
+`vmd filename.xyz`
+
+### Pre-requisites
 
 * VMD versions can be downloaded from https://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=VMD
 * More information on VMD is available at https://www.ks.uiuc.edu/Research/vmd/
