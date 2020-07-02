@@ -55,4 +55,15 @@ As mentioned above, the data presented here are the Cartesean coordinates of ato
 * More information on VMD is available at https://www.ks.uiuc.edu/Research/vmd/
     
     
-# Analysis of data
+# Data analysis
+
+## Loading data
+
+The data can be loaded as a 3-dimensional numpy array using the script load_data.py, as demonstrated in the script load.py. Both the scripts are provided in the folers Equilibrium_MD_data and Non-equilibrium_MD_data. The script load_data.py returns:
+
+* A 3D numpy array of dimensions T x N x 3, where T is the number of time points and N is the number of atoms
+* N, which is the number of atoms (second dimension size of the 3D array).
+
+Most of our analysis on this data is currently not published. However, we have provided the script that we have used to generate the preliminary results, in the Analysis folder. The script can be executed as:
+
+`python LSTM.py <lead_time> <n_hidden> <training_iters> <history> > LSTM.log`
