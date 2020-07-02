@@ -47,19 +47,22 @@ Scripts for running SMD simulations has been provided in the Non-equilibrium_MD_
 * PDF of the tutorial is available at http://www.ks.uiuc.edu/Training/Tutorials/science/10Ala-tutorial/10Ala-tutorial.pdf). 
 * More information on NAMD is available at https://www.ks.uiuc.edu/Research/namd/.
     
+
 # Data visualization
 
 As mentioned above, the data presented here are the Cartesean coordinates of atoms for every time point in the time series. The VMD software package can be used to visualize the atoms in 3D space as well as observing the evolution of the atom positions in time, in the form of a molecular movie. VMD can be launched from the command line by typing 'vmd', and the menu options can be used to load the *.xyz file. Conversely, the *.xyz file can be loaded during launch with the following command:
 
 `vmd filename.xyz`
 
+A movie demonstrating the process of launching VMD and visualizing the reduced dimensonality data for 100-alanine has been uploaded in the google drive.
+
 ### Pre-requisites
 
 * VMD versions can be downloaded from https://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=VMD
 * More information on VMD is available at https://www.ks.uiuc.edu/Research/vmd/
-    
-    
-# Data analysis
+
+
+# Data loading and analysis
 
 ## Loading data
 
@@ -67,6 +70,8 @@ The data can be loaded as a 3-dimensional numpy array using the script load_data
 
 * A 3D numpy array of dimensions T x N x 3, where T is the number of time points and N is the number of atoms
 * N, which is the number of atoms (second dimension size of the 3D array).
+
+## Data analysis
 
 Most of our analysis on this data is currently not published. However, we have provided the script that we have used to generate the preliminary results, in the Analysis folder. The script can be executed as:
 
