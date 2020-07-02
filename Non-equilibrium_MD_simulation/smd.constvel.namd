@@ -1,0 +1,97 @@
+# -*- tcl -*-
+
+#############################################################
+## JOB DESCRIPTION                                         ##
+#############################################################
+
+# SMD simulation (stretching) of deca-alanine in vacuum
+# Constant temperature
+
+#############################################################
+## ADJUSTABLE PARAMETERS                                   ##
+#############################################################
+set run            [file rootname [file tail [info script]]]
+set molname        100-ala
+
+structure          100-ala_autopsf.psf
+coordinates        100-ala_autopsf.pdb
+#outputName         100-ala_smd ; # this is only for test
+outputName         ${molname}.${run}-$env(run_index)
+
+set temperature    300
+
+#############################################################
+## SIMULATION PARAMETERS                                   ##
+#############################################################
+
+# Input
+paraTypeCharmm	    on
+#parameters          par_all27_prot_lipid_cmap.prm
+parameters          par_all36m_prot.prm
+temperature         $temperature
+ 
+# GBIS
+
+# Force-Field Parameters
+exclude             scaled1-4
+1-4scaling          1.0
+switching           on
+dielectric          20.0
+margin              2.0
+if {1} {
+  gbis on
+  alphacutoff         14.
+  switchdist          15.
+  cutoff              16.
+  pairlistdist        17.
+  ionconcentration    0.1
+  solventDielectric   80.0
+  sasa                on
+} else {
+  cutoff              12.0
+  switchdist          10.0
+  pairlistdist        13.5
+}
+
+# Integrator Parameters
+timestep            1.0  ;# 1fs/step
+rigidBonds          all  ;# needed for 2fs steps
+nonbondedFreq	    1
+fullElectFrequency  2  
+stepspercycle       10
+
+# Constant Temperature Control
+langevin            on    ;# do langevin dynamics
+langevinDamping     1     ;# damping coefficient (gamma) of 1/ps
+langevinTemp        $temperature
+langevinHydrogen    no    ;# don't couple langevin bath to hydrogens
+
+# Output
+binaryoutput        no
+dcdfreq             10    ;# save every 10 fs
+outputEnergies      1000
+
+#############################################################
+## EXTRA PARAMETERS                                        ##
+#############################################################
+
+# Tcl interface
+if {0} {
+tclForces           on
+tclForcesScript     smd.tcl
+}
+
+# Tcl interface
+if {1} {
+SMD on
+SMDFile 100-ala.ref
+SMDk 7
+SMDVel 0.0002
+SMDDir 0.621 -0.613 0.489 
+SMDOutputFreq 10
+}
+
+# Simulation protocol
+minimize 10000
+reinitvels $temperature
+run 10000000 ;# 10 ns
