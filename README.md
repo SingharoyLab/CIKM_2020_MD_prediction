@@ -6,7 +6,7 @@ We have generated two data sets from two distinct kinds of MD simulation systems
 
 We have generated high- as well as low-dimensional data for both the systems. In high-dimension, the position of every atom is explicitly defined, resulting in 3324 x 3 (for ADK) and 1003 x 3 (for 100-alanine) dimensions. For the low-dimensional data, positions of only the alpha-carbon atoms of each protein are defined, reducing the dimensionality of the problem to 214 x 3 and 100 x 3 respectively. For simplicity, we only provide the low dimensional data sets.
 
-The data is in {X,Y,Z} format presenting the Cartesean coordinates of the atoms for every time point along the time series. A total of 10000 time points is considered for the ADK example distributed evenly across 10<sup>5<\sup> (saved in steps of 10 fs), and similarly 2002 data points were generated for the 100-alanine example across 10<sup>7<\sup> fs (saved in steps of 5000 fs. 
+The data is in {X,Y,Z} format presenting the Cartesean coordinates of the atoms for every time point along the time series. A total of 10000 time points is considered for the ADK example distributed evenly across 10<sup>5</sup> (saved in steps of 10 fs), and similarly 2002 data points were generated for the 100-alanine example across 10<sup>7</sup> fs (saved in steps of 5000 fs. 
 The equilibrium time series was simulated employing OpenMM, while the non-equilibrium data set was constructed using our NAMD molecular dynamics simulation software packages.
 
 Raw trajectory files can be downloaded from the following google drive link: https://drive.google.com/drive/folders/1gxx-LV-UcQjBOgv7EjUaacQPXLGO0H1l?usp=sharing
