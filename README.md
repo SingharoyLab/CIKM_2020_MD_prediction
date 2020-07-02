@@ -16,11 +16,15 @@ Raw trajectory files can be downloaded from the following google drive link: htt
 
 ## Equiliribum MD
 
-Scripts for running equilibrium simulations can be found in the Equilibrium_MD_simulation folder
+A starting 3D protein model of ADK was generated using an x-ray diffraction crystal structure obtained from the protein data bank (PDB), available at https://www.rcsb.org . The atomic coordinates of ADK are encoded in the traditional PDB format presenting the {X, Y, Z} positions. X-ray is unable to resolve hydrogen atom positions. Thus, the position of hydrogen atoms were estimated before performing the simulation. The Amber force field, FF14SBonlysc, was used for this simulation. Addition of hydrogen atoms and the simulation were both performed using the OpenMM software package.
+
+Scripts for running equilibrium simulations (which includes hydrogen addition) can be found in the Equilibrium_MD_simulation folder.
 
 ### Pre-requisites
 
 * OpenMM: GPU install
+
+We used the GPU-implementation of OpenMM, which can be installed from Anaconda cloud using the following command.
 
 `conda install -c omnia/label/cuda92 -c conda-forge openmm `
 
