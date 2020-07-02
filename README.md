@@ -25,17 +25,19 @@ Scripts for running equilibrium simulations (which includes hydrogen addition) c
 * OpenMM: GPU install
 We used the GPU-implementation of OpenMM, which can be installed from Anaconda cloud using the following command.
 `conda install -c omnia/label/cuda92 -c conda-forge openmm `
-* cuda 92
+* cuda 9.2
+We used CUDA 9.2. However, OpenMM is available for other CUDA versions as well. Please refer to http://openmm.org for installation instructions as well as OpenMM tutorials.
+
     
 ## Non-equilibrium MD
 The PDB file for 100-alanine helix is provided. CHARMM36m force field was used for this simulation, and the simulation was performed using the NAMD software package. A simulation time  of 10<sup>7<\sup> fs was required for extension of the helix to random coil.
     
 Scripts for running SMD simulations has been provided in the Non-equilibrium_MD_simulation folder, along with the PDB of 100-alanine.
 
-
 ### Pre-requisites
 
-
+* NAMD versions can be downloaded from https://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=NAMD. Details of the SMD simulation can be obtained in a tutorial form from http://www.ks.uiuc.edu/Training/Tutorials/science/10Ala-tutorial/tutorial-html/index.html (PDF available at http://www.ks.uiuc.edu/Training/Tutorials/science/10Ala-tutorial/10Ala-tutorial.pdf). More details on NAMD can be found on https://www.ks.uiuc.edu/Research/namd/.
+    
 # Data visualization
 
 
