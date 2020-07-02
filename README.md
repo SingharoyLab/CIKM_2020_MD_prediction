@@ -67,3 +67,5 @@ The data can be loaded as a 3-dimensional numpy array using the script load_data
 Most of our analysis on this data is currently not published. However, we have provided the script that we have used to generate the preliminary results, in the Analysis folder. The script can be executed as:
 
 `python LSTM.py <lead_time> <n_hidden> <training_iters> <history> > LSTM.log`
+
+Note that the name of the data file needs to be manually set in the code, at line 132.
