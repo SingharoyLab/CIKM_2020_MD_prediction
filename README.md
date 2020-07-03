@@ -16,7 +16,7 @@ Raw trajectory files can be downloaded from the following google drive link: htt
 
 ## Equiliribum MD
 
-A starting 3D protein model of ADK was generated using an x-ray diffraction crystal structure obtained from the protein data bank (PDB), available at https://www.rcsb.org . The atomic coordinates of ADK are encoded in the traditional PDB format presenting the {X, Y, Z} positions. X-ray is unable to resolve hydrogen atom positions. Thus, the position of hydrogen atoms were estimated before performing the simulation. The Amber force field, FF14SBonlysc, was used for this simulation. Addition of hydrogen atoms and the simulation were both performed using the OpenMM software package.
+A starting 3D protein model of ADK was generated using an x-ray diffraction crystal structure obtained from the protein data bank (PDB ID: 4ake), available at https://www.rcsb.org/structure/4AKE . The atomic coordinates of ADK are encoded in the traditional PDB format presenting the {X, Y, Z} positions. X-ray is unable to resolve hydrogen atom positions. Thus, the position of hydrogen atoms were estimated before performing the simulation. The Amber force field, FF14SBonlysc, was used for this simulation. Addition of hydrogen atoms and the simulation were both performed using the OpenMM software package.
     
 Script for running equilibrium simulations (which includes hydrogen addition) can be found in the Equilibrium_MD_simulation folder, alond with the PDB file after addition of hydrogens. The script can be executed as:
 
